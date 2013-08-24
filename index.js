@@ -10,5 +10,12 @@ app.get("/", function(req, res){
 });
 
 app.use(express.static(__dirname + '/public'));
-app.listen(port);
-console.log("Listening on puertito " + port);
+var io = require('socket.io').listen(app.listen(port));
+io.sockets.on('connection', function (socket) {
+    socket.emit('message', { message: 'Bienvenido al "chatcito"' });
+    socket.on('send', function (data) {
+        io.sockets.emit('message', data);
+    });
+});
+
+console.log("Monitoreando el puertito " + port);

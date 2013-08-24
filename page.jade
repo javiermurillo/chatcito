@@ -1,9 +1,11 @@
 !!!
 html
   head
-    title= "Real time web chat"
+    title= "el chatcito"
+    script(src='/chat.js')
+    script(src='/socket.io/socket.io.js')
   body
     #content(style='width: 500px; height: 300px; margin: 0 0 20px 0;')
     .controls
-      input.field(style='width:350px;')
-      input.send(type='button', value='send')
+      input.field(id='field', style='width:350px;')
+      input.send(id='send', type='button', value='send')
