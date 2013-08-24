@@ -7,7 +7,7 @@ Esto es un chatcito o esta intentando ser un chatcito en node.js, usando express
 ¿Qué necesito para echarlo a andar?
 =========
 
-Necesitas (node.js)[http://nodejs.org/]
+Necesitas [node.js](http://nodejs.org/ "descarga e instala node.js")
 
 ¿Cómo lo echo a andar?
 =========
